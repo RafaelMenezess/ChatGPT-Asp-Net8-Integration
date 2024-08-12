@@ -2,7 +2,8 @@ using ChatGPT_Asp_Net8_Integration.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddChatGpt(builder.Configuration);
+builder.AddChatGpt(/*builder.Configuration*/);
+builder.AddSerilog(builder.Configuration, "ChatGPT Asp.Net 8 Integration");
 
 // Add services to the container.
 
