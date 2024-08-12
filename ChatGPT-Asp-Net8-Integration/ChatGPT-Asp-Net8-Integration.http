@@ -1,0 +1,6 @@
+@ChatGPT_Asp_Net8_Integration_HostAddress = http://localhost:5039
+
+GET {{ChatGPT_Asp_Net8_Integration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
