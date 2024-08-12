@@ -6,9 +6,8 @@ using System.Xml.Linq;
 
 namespace ChatGPT_Asp_Net8_Integration.Controllers
 {
-    [ApiController]
     [Route("bot/[controller]")]
-    public class ChatController : ControllerBase
+    public class ChatController : Controller
     {
         private readonly OpenAIAPI _chatGpt;
 
@@ -25,7 +24,7 @@ namespace ChatGPT_Asp_Net8_Integration.Controllers
             var completion = new CompletionRequest
             {
                 Prompt = prompt,
-                Model = Model.ChatGPTTurbo,
+                Model = Model.DavinciText,
                 MaxTokens = 200
             };
             var result = await _chatGpt.Completions.CreateCompletionAsync(completion);
